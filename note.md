@@ -1,58 +1,49 @@
+## NFC Workshop 2015/03/16 ~03/20 ##
 ## **Contribution for Webcast**  ##
- - Initial a discussion on b2g mail list channel about merging webcast to FFOS.
-	 - What's mozilla's opinion about webcast sharing (tap to sharing using NFC). 
-	 - There is a slides and some demo videos to explain web cast. 
-		 - put the link here.
-		 - Related developers effort
+ - Webcast is a function implemented in Fx0. KDDI would like to contribute webcast to mozilla code base. 
+	 - The architecture of webcast is uploaded in bug 1143996 https://bug1143996.bugzilla.mozilla.org/attachment.cgi?id=8579793
+	 
+ - Webcast provides the other way to share contents, current status for content sharing between difference devices in FFOS are
+	 - Use mozActivity to share content via
+		 - Bluetooth API, for certificated app only 
+		 - MozNFCPeer.sendFile(), for certificated app only. It's on top of Bluetooth API. 
+		 - via application, like E-mail
+	 - We should provide better user experiences in sharing, especially for large files or content
+		 - Some ideas  
+			 - WiFi Direct APIs, for certificated app only
+				 - WiFi or WiFi direct APIs can be used to establish layer 2 connection between devices. 
+					 - Need to use mozTCPSocket APIs in web content to sharing. 
+					 - Or can we use http server ? We can use WebSocket and XMLHttpRequest APIs if http server is available.  
+						 - http://showcase.kddi.com/csc/works/view/25
+				 - How about using webRTC
+					 - https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel
+ 
+ - Questions and action items
+	- What's mozilla's opinion about webcast sharing (tap to sharing using NFC). Do we want to merge this function to our code base?
+	- Do we like to put the web server into FFOS framework?
+		 - In the form of library or 
+		 - Running in the system by default
+			 - Any security concert?
+			 - What if URL is hacked? 
+			 - Can others device access to web server? 
+			 - Can we limit the access by ip/mac filter?
+			 - Why don't we use https?
+	 - Ux decision for sharing content between devices? 
+		 - We can use mozActivity, and implement the sharing in certificated app. Advantage is that related APIs, such as Bluetooth, WiFi direct and NFC can be certificated as they are now. 
+		 - Expose WiFi Direct, Bluetooth or NFC APIs to privileged, and application developers need to use these APIs to share content. 
+			 - Reference bug - https://bugzilla.mozilla.org/show_bug.cgi?id=1042851#c8
+			 - P2P discussion - http://goo.gl/vZQM0X
+			 - Bug 1082453 - B2G NFC: discuss MozNFCPeer.sendFile
+			 - Bug 1042851 - (b2g-nfc-privilege) (meta) [NFC] Make NFC APIs 
+
+	- Related developers effort
 			 - UX 
-				 - Juwei 
 			 - Gaia (Reviewer)
-				 - Tim
-				 - gmarty 
 			 - Gecko(Technical discussion)
 				 - Henry
 				 - Yoshi
 				 - Dimi 
 				 - Vincent
-
- - Current status for content sharing between difference devices.
-	 - We can use mozActivity to share content using
-		 - Bluetooth API, certificated app only 
-		 - MozNFCPeer.sendFile(), NFC API on top of bluetooth API, certificated app only. 
-		 - via E-mail
-	 - Can we do more, and provide better user experiences.
-		 - WiFi Direct APIs, certificated app only
-			 - can be used to established layer 2 WiFi connection, and get the ip address between two or more devices. 
-			 - Need to use mozTCPSocket APIs in web content to sharing. 
-				 - https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket
-			 - Or we can use http server. 
-				 - http://showcase.kddi.com/csc/works/view/25
-			 - How about using webRTC
-				 - https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel
-			 - or XMLHttpRequest
-				 - https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-				 - 
- - Create meta bugs and break them down to individual bugs to contribute web cast done by KDDI. 
-	 - Bug 1143996. 
-	 
- - Discussion items:
-	 - What's mozilla's opinion about webcast sharing?
-	 - UX decision for sharing content between devices. 
-		 - Use mozActivity, API can be certificated as they are now. 
-		 - Expose WiFi Direct, Bluetooth or NFC APIs to privileged APP, and app developers need to use these APIs to sharing content. 
-	 - Can we put the web server on FFOS framework?
-		 - In the form of library or 
-		 - Running in the system by default
-			 - What if url is hacked? 
-			 - Can others people access to web server ? 
-			 - Maybe use mac filter?
-			 - Why not use https?
-	 - use mozActivity or privileged APIs for content sharing ? 
-	 - P2P discussion - http://goo.gl/vZQM0X
- - Reference bugs
-	 - Bug 1082453 - B2G NFC: discuss MozNFCPeer.sendFile
-	 - Bug 1042851 - (b2g-nfc-privilege) (meta) [NFC] Make NFC APIs available to privileged webapps
-		 - https://bugzilla.mozilla.org/show_bug.cgi?id=1042851#c8
 
  ## **Open web hardware** ##
  - GPIO APIs for open web hardware project
@@ -79,4 +70,21 @@
  - So the questions are 
 	 - More use cases others then controlled by operators?
 	 - Simplify the technical gaps to allow developers to use secure element. 
+ - David Huseby is asking about using secure element as key store, not sure if it is possible to use SD secure men 
+ - https://w3c.github.io/webappsec/specs/credentialmanagement/
+ - Firefox account in NFC 
+ - SD secure element 
+ - KDDI AU payment card
+	 - Web money 
+ - Need hardware devices for test purpose
+	 - embedded secure element 
+	 - SD secure element 
+
+
+
+## Web NFC in W3C ##
+
+ - W3C spec provided by intel
+	 - http://w3c.github.io/web-nfc/index.html
+ - Paul will help to driver standardize W3C. 
 
