@@ -45,7 +45,7 @@
 				 - Dimi 
 				 - Vincent
 
- ## **Open web hardware** ##
+## **Open web hardware** ##
  - GPIO APIs for open web hardware project
 	 - https://bugzilla.mozilla.org/show_bug.cgi?id=1087955
  - The open hardware project is funded by mozilla Japan.  
