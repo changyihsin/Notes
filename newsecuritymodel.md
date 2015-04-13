@@ -143,7 +143,28 @@ New security model
 	 - Ensure that content which uses "sensitive APIs" always runs in a separate process. Enforce in the parent process that only these separate processes can trigger "sensitive APIs". I.e. hacking a child process should not permit access to more sensitive APIs. 
 	 - Enable content which uses "sensitive APIs" to have normal http(s) URLs such that they can use OAuth providers like facebook. 
 	 -  Enable content which uses "sensitive APIs" to use service workers. 
+ - Issues
+	 - Signing
+		 - Should we allow other forms manual review of each app? Can the marketplace "review a developer" and give the developer access to automatic signing? 
+		 - Is there a reason to restrict signed packages to only be hosted on the marketplace? 
+		 - Should we enable the marketplace to host signed packages for developers which doesn't want to run a web server?
+		 - Decide on exact signature format 
+ 
+	 - Verifying signatures
+		 - https://website.com/RSSReader2000/package.pak!//index.html
+		 - The part before the "!//" is the URL to the package itself. The part after the "!//" is the resource path inside the package. 
+		 - Loading signed content does not require an installation to happen, Simply navigating to a URL.
+		 - Before serving any resources from the package to the rest of Gecko, the network layer will first wait for the signatures to be loaded from the package. It will also verify that the resource that is currently being loaded is covered by, and matches, the signature. 
+		 - Should we require that the signature-files live at the start of the package. That way we'd always have the signature available before the file contents covered by the signature. 
+		 - We should likely cache which resources in the package that we've checked the signature of, so that we don't have to recheck if a resource is loaded multiple times. 
+		 - Another thing that needs to be done before any content is served by the network layer is to look in the manifest and populate the nsIPermissionManager database with any permissions enumerated in the manifest. After having checked that the manifest properly matches the signature of course. 
 
+	 - CSP
+	 - Process isolation
+	 - Installing/uninstalling and updating
+	 - Service Workers
+	 - Origins and cookie jars
+	 
  - Reference
 	 - Security Model - https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model
 	 - Runtime and Security Model for Web Applications - http://www.w3.org/TR/runtime/
