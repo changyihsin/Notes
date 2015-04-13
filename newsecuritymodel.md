@@ -160,10 +160,51 @@ New security model
 		 - Another thing that needs to be done before any content is served by the network layer is to look in the manifest and populate the nsIPermissionManager database with any permissions enumerated in the manifest. After having checked that the manifest properly matches the signature of course. 
 
 	 - CSP
+		 - We need to make sure that it can't load scripts from outside of the signed package
+		 - The plan is to use the CSP code to accomplish this
+		 - We'll also need to extend it to enable it to enforce loads to happen "from same package", rather than just "from same origin".
+		 - Does CSP allow putting limits on where serviceworkers can be loaded from? We need to restrict ServiceWorkers scopes as well as script-urls to be from inside the package. 
+		 - We also can't allow signed content to be opened in an "iframe", other than by pages from the same signed package.
+		 - However it's also because we want to always open signed content in a separate OS process, and currently gecko does not support out-of-process plain "iframe"s
+		 - Hopefully this is a restriction we can eventually relax, for example by allowing pages in a signed package to opt in to being iframe-able. But this will require out-of-process "iframe"s and so will have to wait. 
+		 
 	 - Process isolation
+		 - In order to ensure that only signed content can access the APIs that it has been signed for, we want to always use separate child processes to run such content. 
+		 - This means that when a user navigates from an unsigned page to a signed page, that we need to switch which process render the pages. Right now this can only be done by creating a new "iframe mozbrowser"
+		 -  We need to figure out how to make navigation work. This will likely require very tricky "iframe mozbrowser" work. We also need to change security checks that currently are done in the parent process. Currently many of them are heavily based on app-ids and installed apps. This may need to be changed.
+		 - We need to figure out if changes are needed to the security checks of sensitive APIs.  
 	 - Installing/uninstalling and updating
+		 - if the package still exists in our http cache when the user revisits a signed page, but the cache headers indicate that the content needs to be updated, we do a normal GET request to see if a new version needs to be downloaded.
+		 - If a new version of the package is being sent, we follow the same behavior as when visiting a package for the first time. I.e. we need to reverify signatures as well as update any permissions in the nsIPermissionManager database. 
+		 - we want to avoid having to download a whole package if just part of it has changed.
+			 - the server to respond to the GET request for an updated package with just a "diff" of what's changed between the previous and current version.
+			 - gecko indicate that it supports a new type of content encoding as well as send the etag of the current package file
+			 - The server can then look at the etag and if it has (or can generate) a diff between the clients version and the latest version, it can respond with a special content-encoding as well as the package diff. 
+			 - Gecko can then use the diff to patch the existing package. 
+		 - Decide on details of diff mechanism and format
+		 - Decide on how to verify signatures when a diff is downloaded. Also decide if we can verify signatures incrementally or not. 
+
 	 - Service Workers
+		 - In order to make service workers work with the package update logic we should couple package update with service worker update.
+		 - When the ServiceWorker spec require the browser to check or download update, the ServiceWorker script, we instead update the full signed package.
+		 - "automatic" ServiceWorker update check
+			 - when the user visit a page which uses the ServiceWorker
+			 - when the ServiceWorkerRegistration.update() function is called
+		 - How do we enable the newly installing serviceworker to load content from the new package version, even though the previous package version is the one pinned in the cache. 
+		 - Does CSP allow putting limits on where serviceworkers can be loaded from? We need to restrict ServiceWorkers scopes as well as script-urls to be from inside the package. 
 	 - Origins and cookie jars
+		 - we should stop always using different cookie jars for different apps
+		 - In particular normal unsigned content should always use the same cookie jar no matter which app it belongs to, I.e. login to facebook 
+		 - Signed packages will get their own cookie jars. So a signed package will not share cookies, IndexedDB data, etc with unsigned content from the same domain
+		 - Do requests from a signed package to unsigned content use the package's cookie jar? Or the normal cookie jar. I.e. if a signed package does an XHR request to a normal website, does that use the website's cookies
+		 - Figure out how to give signed content its own cookie jar. 
+			 - One potential solution here is to remove our close tie between cookie jar and appid. 
+			 - Another possible solution would be to make the various APIs use the full package path instead of the domain as key. 
+		 - What happens if unsigned content does an XHR request to a URL inside a signed package. There doesn't seem to be any security issues involved in allowing that. 
+		 - Does this mean that the *cookies* used for signed content is the same as the cookies used for unsigned content? I.e. that only IDB/localStorage/permissions are separate for signed content. That seems to be the case if network requests to normal websites from signed content uses the normal cookie jar. What does document.cookies return? Should we make it return null? 
+		 - One potential solution here is to do security checks in the parent only to protect the storage data and permissions of the signed content. And make sure to flag the principals used for documents loaded from signed packages as belonging to the appropriate package. But for anything related to network, just treat signed content like normal content belonging to the normal cookie jar. 
+		 - Would it be simpler to make signed content use an entirely separate cookie jar. Including for XHR requests and "iframe"s to content outside of the signed package? That might allow us to use a more generic cookie jar feature.
+		 - Figure out exactly what field to use to indicate which signed package a principal belongs to
 	 
  - Reference
 	 - Security Model - https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model
