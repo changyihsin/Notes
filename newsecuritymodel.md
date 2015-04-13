@@ -135,14 +135,22 @@ Web App Types
 
 New security model
 ==================
+ 
+
+ - QA
+	 - What is sensitive APIs?
+	 - Current update/installation/uninstallation mechanism 
+	 - Current security model
+	 - What are cookie jars for current apps?
+
  - Goal
-	 - Enable exposing "sensitive APIs" to 3rd party developers. 
+	 - Enable exposing "sensitive APIs" to 3rd party developers.
 	 - Use the same update and security model for gaia and for 3rd party content. 
 	 - Don't require content which uses "senstivie APIs" to be installed. Users should be able to simply browse to it. 
-	 - Don't have separate cookie jars for separate apps. At least for normal content which doesn't use "sensitive APIs". 
-	 - Ensure that content which uses "sensitive APIs" always runs in a separate process. Enforce in the parent process that only these separate processes can trigger "sensitive APIs". I.e. hacking a child process should not permit access to more sensitive APIs. 
-	 - Enable content which uses "sensitive APIs" to have normal http(s) URLs such that they can use OAuth providers like facebook. 
-	 -  Enable content which uses "sensitive APIs" to use service workers. 
+	 - ***Don't have separate cookie jars for separate apps. At least for normal content which doesn't use "sensitive APIs".***  
+	 - ***Ensure that content which uses "sensitive APIs" always runs in a separate process. Enforce in the parent process that only these separate processes can trigger "sensitive APIs". I.e. hacking a child process should not permit access to more sensitive APIs.*** 
+	 - ***Enable content which uses "sensitive APIs" to have normal http(s) URLs such that they can use OAuth providers like facebook.*** 
+	 -  ***Enable content which uses "sensitive APIs" to use service workers.*** 
  - Issues
 	 - Signing
 		 - Should we allow other forms manual review of each app? Can the marketplace "review a developer" and give the developer access to automatic signing? 
