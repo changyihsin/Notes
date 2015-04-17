@@ -1,26 +1,26 @@
- 1. WiFi direct APIs improvement
- 2. WiFi emulator support in KK 
- 3. NFC emulator support in KK
- 4. **New security model development** 
- 5. RTSP test cases
- 6. **Performance improvement** 
-	 8. add performance marker gecko API
-	 9. put performance marker to identify the performance bottleneck for each WiFi, NFC and RTSP if necessary.  
- 5. **Multi screen**
- 6. Necko study group
- 8. RTSP refactor plan
- 10. **New gonk interface to have better support for** 
-	 11. Cross platform 
-	 12. easy porting to different platform 
-	 13. improve test coverage
-	 14. WiFi 
-		 15. 
-	 11. RTSP
-		 12. Add test cases 
-		 13. move to content process 
-		 14. eliminate the dependency for libstagefright  
-	 12. NFC
-		 13. Test coverage 
+ - WiFi direct APIs improvement
+ - WiFi emulator support in KK
+ - NFC emulator support in KK
+ - **New security model development**
+ - RTSP test cases
+ - **Performance improvement**
+	 - add performance marker gecko API
+	 - put performance marker to identify the performance bottleneck for each WiFi, NFC and RTSP if necessary. 
+ - **Multi screen**
+ - Necko study group
+ - RTSP refactor plan
+ - **New gonk interface to have better support for** 
+	 - Cross platform
+	 - easy porting to different platform
+	 - improve test coverage
+	 - WiFi
+		 -  
+	 - RTSP
+		 - Add test cases
+		 - move to content process
+		 - eliminate the dependency for libstagefright
+	 - NFC
+		 - Test coverage 
 
   
 
