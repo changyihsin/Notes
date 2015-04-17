@@ -9,7 +9,7 @@
 
  - If you has flashed your N5 to Firefox OS v2.2, you can download Gaia+Gecko from [2] when you want to get a updated Firefox OS v2.2.
 
- - [1] MDN Build steps: https://developer.mozilla.org/en-US/Firefox_OS/Building_and_installing_Firefox_O/Firefox_OS_build_process_summary
+ - [1] MDN Build steps: https://developer.mozilla.org/en-US/Firefox_OS/Building_and_installing_Firefox_OS/Firefox_OS_build_process_summary
  - [2] Mozilla FTP for the lastest v2.2 Gaia+Gecko: http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g37_v2_2-nexus-5-l-eng/
  - [3] How to unlock your N5:
 	 - Go to "Settings"->"About phone", then tap "Build number" 6 times to enter developer mode
