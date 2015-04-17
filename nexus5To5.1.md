@@ -1,8 +1,8 @@
 
  - First, flash Nexus 5 binaries for Android 5.1 (LMY47D) as the base image
-	 - a. download 5.1 (LMY47D) image for "Nexus 5" from https://developers.google.com/android/nexus/images
-	 - b. follow [3] to unlock your N5
-	 - c. You can see your Nexus 5 at "FASTBOOT MODE", then use flash-all.sh located in hammerhead-lrx47d folder uncompressed at step 1-a to install Android 5.1.
+	 - download 5.1 (LMY47D) image for "Nexus 5" from https://developers.google.com/android/nexus/images
+	 - follow [3] to unlock your N5
+	 - You can see your Nexus 5 at "FASTBOOT MODE", then use flash-all.sh located in hammerhead-lrx47d folder uncompressed at step 1-a to install Android 5.1.
         $ ./flash-all.sh
 
  - Follow MDN [1] to build your N5 local build. Please be noted that when you run "./config.sh", you need to use "nexus-5-l" as the device name. After building FxOS successfully, you need to run flash.sh to your N5 at fastboot mode.
