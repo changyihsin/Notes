@@ -14,7 +14,19 @@
 	 - easy porting to different platform
 	 - improve test coverage
 	 - WiFi
-		 -  
+		 - Current hardware/software requirements:
+			- Linux kernel 2.4.x or 2.6.x with Linux Wireless Extensions v15 or newer
+			-  FreeBSD 6-CURRENT
+			- NetBSD-current
+			- Microsoft Windows with WinPcap (at least WinXP, may work with other versions)
+			- drivers:
+				 - Linux drivers that support cfg80211/nl80211.
+					 -  Even though there are number of driver specific interface included in wpa_supplicant, please note that Linux drivers are moving to use generic wireless configuration interface driver_nl80211 (-Dnl80211 on wpa_supplicant command line) should be the default option to start with before falling back to driver specific interface. Linux drivers that support WPA/WPA2 configuration with the generic Linux wireless extensions (WE-18 or newer). Obsoleted by nl80211. In theory, any driver that supports Linux wireless extensions can be used with IEEE 802.1X (i.e., not WPA) when using ap_scan=0 option in configuration file.
+				 - Wired Ethernet drivers (with ap_scan=0)
+				 - BSD net80211 layer (e.g., Atheros driver) 
+					 - At the moment, this is for FreeBSD 6-CURRENT branch and NetBSD-current.
+				 - Windows NDIS
+					 - The current Windows port requires WinPcap (http://winpcap.polito.it/). See README-Windows.txt for more information.  
 	 - RTSP
 		 - Add test cases
 		 - move to content process
