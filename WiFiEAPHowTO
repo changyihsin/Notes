@@ -1,0 +1,61 @@
+ - Using openssl what does “unable to write 'random state'” mean
+	 - Solution: sudo chown user:user ~/.rnd
+ - Asus RT-N16 Wireless N Router 
+ - FreeRadius version 2.1.12
+	 - sudo apt-get install freeradius 
+	 - Configuration files 
+		 - /etc/freeradius/users
+			 - identity 
+			 - password 
+		 - /etc/freeradius/eap.conf
+			 - 認證最重要的設定，舉凡tls, ttls等等，都在此設定
+			 - default_eap_type = tls (原本是md5)
+			 - private_key_password = 123456 (產生憑證時輸入的密碼)
+			 - private_key_file = ${certdir}/srv_keycert.pem (當時後產生的伺服器憑證)
+			 - certificate_file = ${certdir}/server_keycert.pem (同上)
+			 - CA_file = ${cadir}/cacert.pem (這個檔案會在demoCA裡面)
+			 - dh_file = ${certdir}/dh (tls需要用到的檔案)
+			 - random_file = ${certdir}/random (同上)
+		 - /etc/freeradius/clients.conf
+			 - client端的設定檔案，我AP的設定檔就寫在裡面了，沒有複雜的設定
+			 - client 10.247.24.86 {
+			        secret = testing123
+			        shortname  = asus-ap
+			   }
+		 - /etc/freeradius/certs
+		 - /etc/freeradius/radiusd.conf
+			 - 最主要的設定檔案，設定此RADIUS伺服器是否有支援eap, sql, proxy等
+			 - #$INCLUDE sql.conf
+			 - #INCLUDE sql/mysql/counter.conf
+			 - #$INCLUDE sqlippool.conf
+		
+		 - openssl 
+			 - sudo apt-get install openssl 
+ - 產生伺服器憑證與客戶端憑證
+	 - /usr/lib/ssl/misc/CA.sh 
+	 - /usr/lib/ssl/openssl.conf 
+ - CA 
+	 - CA.sh -newca
+	 - This step is optional, Android supports DER-encoded X.509 certificates, saved in files with a .crt or .cer file extension. If your certificate file has a .der or other extension, you must change it to .crt or .cer or you won’t be able to install it. 
+		 - openssl x509 -outform der -in cacert.pem -out cacert.crt
+ - Server certificate
+	 - openssl req -new -nodes -keyout srv_key.pem -out srv_req.pem -config /usr/lib/ssl/openssl.conf
+	 - openssl ca -config /usr/lib/ssl/openssl.conf -policy policy_anything -out srv_cert.pem -infiles ./srv_req.pem
+	 - This step is optional.
+		 - cat srv_key.pem srv_cert.pem > srv_keycert.pem
+ - Client certificate
+	 - openssl req -new -keyout cli_key.pem -out cli_req.pem -config ../openssl.cnf
+	 - openssl ca -config ../openssl.cnf -policy policy_anything -out cli_cert.pem -infiles ./cli_req.pem
+	 - openssl pkcs12 -export -in cli_cert.pem -inkey cli_key.pem -out cli_cert.p12 -clcerts
+ - 產生兩個使用tls憑證需要用到的檔案
+	 - openssl dhparam -check -text -5 512 -out dh
+	 - dd if=/dev/urandom of=random count=2
+
+clients.conf: (添加了下列幾行，192.168.1.1是小弟AP的IP位址，secret是密碼請自行設定)
+client 192.168.1.1 {
+        secret          = sodisgood
+        shortname   = sod-ap
+}
+
+ - Start FreeRadius Server
+	 - sudo freeradius -X &(-X是debug mode，&是背景執行)
