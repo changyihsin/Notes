@@ -198,6 +198,59 @@ g) you want to confirm some information
     Can you repeat the details?
     Let me check.
 
+## 2015/05/20 ##
+
+ - **B** cd1.5 Listen to a telephone conversation between Bernard Klebermann and Koichi Sato. Which of the problems mentioned in Exercise A do the speakers have when communicating?
+	 - a) the person speaks too fast or too quietly
+	 - d) you want to make sure of the spelling of something
+	 - e) you want more information about a subject
+	 - f) the connection is not good and you can't continue the conversation
+	 - g) you want to confirm some information
+ - **C** cdl.6 Listen to the same two speakers in a similar conversation. Explain why the second conversation is better. Give as many reasons as you can.
+	 - The Koichi asks Bernard to hold on a second to get a pen and write down the detail 
+	 - Koichi confirms with Bernard the detail order information
+	 - Koichi ask Bernard to spell of something unclear - Like the new company name and explaining the meaning of roll out. 
+	 - When connection is bad, Koichi asks Bernard to send a e-mail for confirmation. 
+ - **D** Listen to the conversation again and complete these extracts with words or expressions from it.
+1 That's good. Could you **hold on a second** while I get a pen?
+	(b) you want someone to stop talking while you do something
+2 Sorry, Bernard, I **didn't catch that ** Could you **slow down** a little, please? I need to take some notes.
+	(a) the person speaks too fast or too quietly
+3 Let me **check** that: 200 posters, pens and pencils and 50 bags **got**it.
+	(g) you want to confirm some information
+4 Seel- **mayler** sorry, could you **spell that for ** me, please, Bernard? I don't think I know the company.
+	d) you want to make sure of the spelling of something
+5 'They've placed an order for 518 of the new lasers'  'Sorry, **do you say** 580 lasers?'
+	(g) you want to confirm some information
+6 Sorry, I don't follow you. What **does** 'roll-out' **mean** ?
+	(c) you don't understand a word/expression the other person uses
+7 But I need details about the company ... Sorry, it's **a bad line**
+Could you **pick up** , please? I can't hear you very well.
+	(f) the connection is not good and you can't continue the conversation
+8 Sorry, I still can't hear you. I'll **call you back** , maybe the line will be better.
+
+## 2015/05/21 ##
+
+ - CD1.7 
+	 - The Director may not have time to read the weekly report 
+	 - Hire new person cost a lot 
+	 - Personal approach is not 
+ - CD1.8 
+	 - Long team relationship
+
+## 2015/05/26 ##
+Page 16
+ceilinged - 有天花板的
+elegance - （舉止、服飾、風格等的）優雅，雅緻，典雅
+seduce - 誘惑；引誘；誘使墮落（或犯罪）
+charm - 魅力
+discerning - 有識別力的；眼光敏銳的
+deliberate - 深思熟慮的，慎重的，謹慎的
+realm - 界，領域；範圍
+celebrity - 名人，名流
+glamour - 魅力，誘惑力
+ 
+
 
 I am an inhibited person when talking in public space using foreign language. As I wrote in my previous article, being a good communicator depending on several factors. The most important one could be fluent in the language. I don't have extensive vocabulary. It makes me difficult to describe thing in a concise or succinct way. I am afraid of making a mistakes while talking to public.     
 
