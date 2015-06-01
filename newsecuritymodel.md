@@ -138,10 +138,11 @@ New security model
  
 
  - QA
-	 - What is sensitive APIs?
+	 - Can we define what is sensitive APIs?
 	 - Current update/installation/uninstallation mechanism 
 	 - Current security model
 	 - What are cookie jars for current apps?
+	 - 
 
  - Goal
 	 - Enable exposing "sensitive APIs" to 3rd party developers.
