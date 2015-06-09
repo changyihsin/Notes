@@ -1,0 +1,268 @@
+===== Date: 2015.06.08 =====
+1. Event (EventListener, EventTarget, Event code gen): Jocelyn
+
+===== Date: 2015.06.01 =====
+1. DocShell in a Nutshell: Jonathan
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1MJUqUIaptCTNC-fdj9HMbUW1UAj2zpJG4GNuESEDzPo/edit?usp=sharing
+
+
+===== Date: 2015.05.25 =====
+1. Browser API: Kershaw
+
+    https://goo.gl/p1nrcu
+
+
+===== Date: 2015.05.13 =====
+1. DOM Range and Selection: Ting-Yu
+http://aethanyc.github.io/slides/range-and-selection/
+
+===== Date: 2015.05.11 =====
+1. DOM Focus Management: Sean
+https://drive.google.com/open?id=1GzI8MbcsZMJ1ea47DCnLV6trgGOJsR8J8c618lISHrc&authuser=0
+https://drive.google.com/open?id=1d844TqFqN1V2r7XIVymIwl_zarUP_Z-q-Qv-avPBmvA&authuser=0
+
+===== Date: 2015.04.27 =====
+Proposal for next topics:
+
+    For study & internal sharing
+
+    Browser API -- Kershaw, Jocelyn
+
+    DOM Level 2 Traversal and Range Specification http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ or Selection -- Ting-Yu 2015.05.11
+
+    Event (EventListener, EventTarget, Event code gen) -- Jocelyn
+
+    DocShell -- Jonathan
+
+    Focus -- Sean 2015.05.11
+
+    For brown-bag sharing
+
+    Sharing on "DOM Enlightenment"
+
+    Same-Origin Policy
+
+    W3C Spec Maturation
+
+    I think we can at least mention the differences between WD, CR, PR, etc, so that people can distinguish between stable specs and unstable ones.
+
+
+===== Date: 2015.04.20 =====
+Brown-bag I sharing:
+
+Slides:
+1. Before Going to DOM: Kershaw
+
+    http://goo.gl/HLEUOY
+
+2. Learn DOM in 20 Minutes: Ethan
+
+    http://goo.gl/wWZYcZ
+
+3. DOM History and Levels: Aknow
+
+    http://goo.gl/rBvJWu
+
+
+Video:
+
+    File server: fs1.mozilla.com.tw
+
+    Folder: Public/training_video/20150420_Introduction_To_DOM/20150420_Introduction_To_DOM.mp4
+
+
+===== Date: 2015.04.10 =====
+Rehearsal of Brown-bag I.
+
+===== Date: 2015.03.23 =====
+1. Content Security Policy: Marco
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1bv_aNU2dYPHYst5kWrem3CG-iSzxr_Sus0WHvJOX5yM/edit#slide=id.p12
+
+How to categorize these topics? Is there any order to them?
+Please put your idea in other doc/etherpad and then share the link below.
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1q2jBBHS2gupTECJpd1XClk2g2asg4xoOvZQ_qAntWk8/edit?usp=sharing
+
+
+===== Date: 2015.03.09 =====
+1. WebIDL Introduction: Jonathan
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1qGogH3ijrRGxi7kyVDV0PXUbOSW6togl_v4GcDFBGDQ/edit?usp=sharing
+
+2. Same-Origin Policy: Ethan
+
+    http://goo.gl/IZAXnz
+
+    網路攻防戰 - 淺析XSS(Cross Site Script)漏洞原理
+
+      http://anti-hacker.blogspot.tw/2008/01/xsscross-site-script.html
+
+    Foiling Cross-Site Attacks (XSS and CSRF)
+
+      http://shiflett.org/articles/foiling-cross-site-attacks
+
+===== Date: 2015.02.24 =====
+5. Bindings (WebIDL): Sean Lin
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1En73nSD6VEISkhwTDQj8SkBvbIl2_PBMvTWFyAmwipg/edit?usp=sharing
+
+
+===== Date: 2015.02.09 =====
+*** DOM ***
+1. DOM Level 0, 1, 2, 3, and 4: Aknow
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1Sd2q55vnEIaHVK0vDTcBeu4rsWRW1y88B4aa5BDD85o/edit#slide=id.g6df04339c_059
+
+2. DOM Tree: Ethan
+    https://drive.google.com/a/mozilla.com/file/d/0B0YiB6jE5nlXOUtDVDFfeWFGOFk/view?usp=sharing
+3. Examples of how to manipulate DOM with JavaScript: Ting-Yu Lin
+
+    http://aethanyc.github.io/slides/dom-enlightenment/
+
+4. BOM & DOM data types: Kershaw
+
+    http://goo.gl/aJkve4
+
+    https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/comment-page-1/
+
+
+===== Date: 2015.02.02 =====
+1. History (HTML, XML, JavaScript): ShianYow
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1Jq0FlCklg5ag5_zjIACvnvMQ_Oj8n0wcI2eES20FiR8/edit?usp=sharing
+
+
+*** W3C ***
+1. Organization: Jonathan
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1_m25z4m_WiVTgZdihfvULJwYA4MMl5Q89kI07q656ZU/edit?usp=sharing
+
+2. Spec Maturation: Gina
+
+    https://docs.google.com/a/mozilla.com/presentation/d/1PnA6jaddUkQIngNQMQZyBZPiYOb88Nx5Bu8Tv1TDPMU/edit#slide=id.p
+
+3. Groups: Marco
+
+    https://docs.google.com/a/mozilla.com/presentation/d/18JX_HZ-CSWmm6IXCwWfwW5G10fG42CrRocXKV9IJRPA/edit#slide=id.p12
+
+
+===== Date: 2015.01.19 =====
+Topic 1: DOM Introduction
+Please put concepts/terms that you think is important when introducing DOM in the following list.
+
+    Before going to the DOM
+
+    HTML
+
+    XML
+
+    JavaScript
+
+    What is DOM?
+
+    Why DOM?
+
+    What is W3C?
+
+    W3C Spec Maturation
+
+    Editor Draft
+
+    Working Draft (WD)
+
+    Candidate Recommendation (CR)
+
+    Proposed Recommendation (PR)
+
+    W3C Recommendation (REC)
+
+    W3C Groups
+
+    Interesting Group
+
+    Community Group
+
+    Working Group
+
+    DOM Levels
+
+    Level 0
+
+    Level 1
+
+    Level 2
+
+    Level 3
+
+    Level 4
+
+    DOM and JavaScript
+
+    API (web or XML page) = DOM + JS (scripting language)
+
+    Global DOM Objects for JavaScript (BOM - Browser Object Model)
+
+    document
+
+    history
+
+    location
+
+    navigator
+
+    screen
+
+    window
+
+    Important DOM data types
+
+    document
+
+    element
+
+    attribute
+
+    nodeList
+
+    DOM Tree
+
+    Node object: types, inheritance relationship
+
+    DOM traversal
+
+    HTML Parser
+
+    Web IDL
+
+    DOM Bindingshttps://taiwan.etherpad.mozilla.org/DOMStudyGroup
+
+    Books
+
+    DOM Enlightenment http://techbus.safaribooksonline.com/book/-/9781449344498 (Using DOM APIs by examples in 180 pages)
+
+    Whole book in web page http://www.domenlightenment.com
+
+    http://techbus.safaribooksonline.com/book/programming/javascript/9781449344412
+
+    Free unedited copy http://www.javascriptenlightenment.com/
+
+    Douglas Crockford: An Inconvenient API - The Theory of the DOM (a little outdated)
+
+    https://www.youtube.com/watch?v=Y2Y0U-2qJMs
+
+    slide: http://javascript.crockford.com/hackday.ppt
+
+    Same-origin policy
+
+
+
+Topic 2: XPCOM Introduction
+Please put concepts/terms that you think is important when introducing XPCOM in the following list.
+
+    References
+
+    https://developer.mozilla.org/en-US/docs/Introduction_to_XPCOM_for_the_DOM
+
+    David Baron - https://air.mozilla.org/xpcom-and-internal-strings-in-gecko/
