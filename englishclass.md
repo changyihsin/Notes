@@ -249,7 +249,75 @@ deliberate - 深思熟慮的，慎重的，謹慎的
 realm - 界，領域；範圍
 celebrity - 名人，名流
 glamour - 魅力，誘惑力
+heritage - 遺產
+aspire - 熱望，嚮往；懷有大志
+modernity - 現代性；新式
+relentless - 不間斷的，持續的；堅韌的，不懈的
+ambition - 雄心，抱負
+ought to - 應該，應當
+dilute - 削弱；降低
+appetite - 食慾，胃口
+sceptical - 傾向於懷疑的
+convey - 運送，搬運，轉運
+curriculum - 學校的全部課程
+fragrance - 芬芳；香味；香氣
+ambassador - 大使；使節
+scent - 氣味，香味
+premium - 高價的；優質的
+
+
+
+ - CD 1-9 Listen to Svend Hollensen, Professor of International Marketing at the U niversity of South Denmark, and answer these questions.
+	 - Which two marketing strategies does he mention?
+		 - One product for all global markets 
+		 - Adapt your product to different culture and different country 
+	 - What does he say about a) the OneCafe company, and b) Lux?
+		 - OneCafe
+			 - One product for all global market, in Demark 
+		 - Lux 
+			 - One product for all global market. 
  
+ - CD 1-10
+A new curriculum that enables market **worldwide** to have the latest **practice**. The latest **knowledge** and **technique**, to enable them to become **international** marketers. So our students are asked to write a **report**, develop a **business plan** , develop a
+**presentation**, write a  **web course,** present an 10 -just as they would do in the workplace. Because we know in talking to employers **worldwide** that they want marketing professionals that have the **capability** and skills required of today's demanding  **global** environment.
+
+sustainability - 持續性；能維持性；永續性
+inspiration - 靈感
+account for - 對……負有責任 / 說明
+yield - 出產；結出（果實）；產生（效果，收益等）
+were ageing - 老化
+livelihood - 生活；生計
+ethical - 道德的；合乎道德的
+marque - （汽車等的）型號；牌子
+poverty - 貧窮，貧困
+
+
+ - CD1.16 Alison Ward is Head of Global Corporate Responsibility at Cadbury, the chocolate maker. Listen to the first part of the interview and complete this information about Cad bury's Cocoa Partnership.
+ - Launched - 2008 IN Ghana
+ - % Cadbury cocoa beans from Ghana - 70%
+ - % yield from the land - 40 %
+ - Average age of farmers - 50
+ - Cadbury partners in Ghana - 
+ 
+ - CD 1.17
+ - Well, we're really proud that we've achieved **Fairtrade  certification** for our Cadbury Dairy Milk brand 
+ - So it means that people around the world can now make an **ethical choice** and **know that the money, some of the money from their chocolate bar purchase is going right back to famers in Ghana**.
+ - Fairtrade's an interesting marque in that it's not only **very powerful**  in consumer markets - it's very well **understood** - but it also has great power back in **cocoa-farming communities**. 
+  
+ - CD1.18 Listen to the final part and answer these questions.
+1 What other partnership does Cadbury have?
+Ans: partership with milk, footprint  
+2 What does Alison say about the changes in the supply chain with that partnership?
+Ans: 
+
+colonia - 缺少地方政府的服務及照管、大多數為貧窮成員組成的「墨西哥及美人社區」
+Fortune - 財產，財富；巨款
+nouveau riche - 暴發戶
+Entrepreneur - 企業家；事業創辦者
+imperative - 必要的；緊急的；極重要的
+alumni - 男校友；男女合校之男女校友
+perseverance - 堅持不懈；堅忍不拔
+
 
 
 I am an inhibited person when talking in public space using foreign language. As I wrote in my previous article, being a good communicator depending on several factors. The most important one could be fluent in the language. I don't have extensive vocabulary. It makes me difficult to describe thing in a concise or succinct way. I am afraid of making a mistakes while talking to public.     
